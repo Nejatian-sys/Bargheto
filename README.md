@@ -24,20 +24,71 @@ Password: emilyspass
 
 ## 📁 ساختار پوشه‌ها
 
-src/app/
-core/
-services/
-user.service.ts
-features/
-auth/
-auth.module.ts
-login/
-login.component.ts
-login.component.html
-products/
-products.module.ts
-product-list/
-product-list.component.ts
+src/
+ └── app/
+     ├── core/    
+     ├── interceptors/
+     │   │   └── auth.interceptor.ts                    
+     │   ├── services/
+     │   │   ├── auth.service.ts   
+     │   │   └── products.service.ts
+     │   │
+     │   │ 
+     │   ├── repositories/         
+     │   │   ├── auth.repository.ts
+     │   │   ├── user.repository.interface.ts
+     │   │   └── user.repository.ts 
+     │   │   ├── auth.repository.impl.ts    
+     │   │  
+     │   ├
+     │   └── models/
+     │       ├── user.model.ts
+     │       └── product.model.ts
+     │
+     │
+     ├── features/
+     │   ├── auth/
+     │   │   ├── login/
+     │   │   │   └── login.component.html   
+     │   │   ├── auth-moudule.ts
+     │   │   ├── auth-routing.module.ts
+     │   │      
+     │   │
+     │   ├── products/
+     │   │   ├── pages/
+     │   │   │   ├── products-list/
+     │   │   │   │   ├── products-list.ts
+     │   │   │   │   ├── products-list.html
+     │   │   │   │   └── products-list.scss
+     │   │   │   └── product-details.ts
+     │   │   │   └── product-details.html
+     │   │   ├── products.module.ts
+     │   │   ├── products-routing.module.ts 
+     │   │   ├── components/product-card/
+     │   │   │   ├── product-card.ts
+     │   │   │   ├── product-card.html
+     │   │   │   └── product-card.scss
+     │   │   └── products.module.ts
+     │
+     ├── shared/                      # UI components reusable
+     │   ├── components/pagination/
+     │   │   ├── pagination.ts
+     │   │   ├── pagination.html
+     │   │   └── pagination.scss
+     │   ├── components/search-box/
+     │   │   ├── search-box.ts
+     │   │   ├── search-box.html
+     │   │   └── search-box.scss
+     │   ├── components/product-card/
+     │   │   ├── product-card.ts
+     │   │   ├── product-card.html
+     │   │   └── product-card.scss
+     │   ├── pipes/
+     │   └── shared.module.ts
+     │
+     ├── app-routing.module.ts
+     └── app.component.ts
+
 
 ---
 
